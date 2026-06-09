@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entire-Home</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></head>
+<body>
+
+    <!-- Navbar code  -->
+<header class="es-header">
+    <div class="es-container">
+        <!-- logo -->
+         <a href="index.html" class="es-logo">
+            <img src="img/Entire_logo.png" alt="Entire Solutions Logo">
+         </a>
+
+          <nav class="es-nav">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Brochure</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+
+<section class="hero">
+
+    <!-- Slides -->
+    <div class="hero-slider">
+
+        <div class="hero-slide active">
+            <img src="img/hero2.webp" alt="">
+        </div>
+
+        <div class="hero-slide">
+            <img src="img/hero2.jpg" alt="">
+        </div>
+
+        <div class="hero-slide">
+            <img src="img/hero3.jpeg" alt="">
+        </div>
+
+    </div>
+
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Content -->
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                PRECISION • STRENGTH • PERFORMANCE
+            </span>
+
+            <h1>
+                LIGHT & HEAVY<br>
+                FABRICATION<br>
+                SOLUTIONS
+            </h1>
+
+            <p>
+                Laser Cutting, Powder Coating, Sheet Metal
+                Bending & Electrical Panel Manufacturing
+                for Industrial Excellence.
+            </p>
+
+            <a href="#" class="hero-btn">
+                GET A QUOTE
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Slider Indicators -->
+    <div class="hero-indicators">
+
+        <span class="indicator active" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+
+    </div>
+
+</section>
+
+<!-- ================================================================================================== -->
+
+<section class="why-choose-section">
+
+    <div class="container">
+
+        <div class="why-grid">
+
+            <!-- 01 -->
+            <div class="why-card">
+
+                <img src="img/quality-fabrication.webp" alt="High Quality Fabrication">
+
+                <div class="why-card-bottom">
+
+                    <h3>High-Quality Fabrication</h3>
+
+                    <div class="why-icon">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+
+                </div>
+
+                <div class="why-description">
+                    We deliver precision-engineered fabrication solutions with superior finishing and strict quality standards.
+                </div>
+
+            </div>
+
+            <!-- 02 -->
+            <div class="why-card">
+
+                <img src="img/modern.jpg" alt="Modern Machinery">
+
+                <div class="why-card-bottom">
+
+                    <h3>Modern Machinery</h3>
+
+                    <div class="why-icon">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+
+                </div>
+
+                <div class="why-description">
+                    Equipped with advanced laser cutting, bending and fabrication equipment operated by experienced professionals.
+                </div>
+
+            </div>
+
+            <!-- 03 -->
+            <div class="why-card">
+
+                <img src="img/on-time.jfif" alt="On Time Delivery">
+
+                <div class="why-card-bottom">
+
+                    <h3>On-Time Delivery</h3>
+
+                    <div class="why-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                </div>
+
+                <div class="why-description">
+                    Efficient planning and manufacturing processes ensure timely project completion every time.
+                </div>
+
+            </div>
+
+            <!-- 04 -->
+            <div class="why-card">
+
+                <img src="img/custom-Manufacturing.jfif" alt="Custom Manufacturing">
+
+                <div class="why-card-bottom">
+
+                    <h3>Custom Manufacturing</h3>
+
+                    <div class="why-icon">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                    </div>
+
+                </div>
+
+                <div class="why-description">
+                    Tailored fabrication solutions designed according to your exact industrial requirements.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Dynamic Content -->
+
+        <div class="why-info-box">
+
+            <h2 id="whyTitle">
+                High-Quality Fabrication
+            </h2>
+
+            <p id="whyDesc">
+                We deliver precision-engineered fabrication solutions with superior finishing and strict quality standards.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+const cards = document.querySelectorAll('.why-card');
+const title = document.getElementById('whyTitle');
+const desc = document.getElementById('whyDesc');
+
+cards.forEach(card => {
+
+    card.addEventListener('mouseenter', () => {
+
+        title.textContent =
+            card.querySelector('h3').textContent;
+
+        desc.textContent =
+            card.querySelector('.why-description').textContent;
+
+    });
+
+});
+
+</script>
+<!-- ================================================================================================ -->
+<section class="about-section">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <!-- LEFT IMAGE -->
+            <div class="about-image-wrap">
+
+                <div class="about-image">
+                    <img src="img/about-Entire.jpg" alt="">
+                </div>
+
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="about-content">
+
+                <span class="service-tag">
+                    About Us
+                </span>
+
+                <h2>
+                    Precision Metal Fabrication
+                    For Industrial Excellence
+                </h2>
+
+                <p>
+                    Entire Solutions specializes in light & heavy fabrication,
+                    laser cutting, powder coating, bending and electrical panel
+                    box manufacturing with a commitment to quality, precision
+                    and on-time delivery.
+                </p>
+
+                <!-- TABS -->
+                <div class="about-tabs">
+
+                    <div class="tab-buttons">
+
+                        <button class="tab-btn active" data-tab="vision">
+                            Our Vision
+                        </button>
+
+                        <button class="tab-btn" data-tab="mission">
+                            Our Mission
+                        </button>
+
+                        <button class="tab-btn" data-tab="quality">
+                            Quality Policy
+                        </button>
+
+                    </div>
+
+                    <div class="tab-content active" id="vision">
+                        <p>
+                            To become a trusted leader in fabrication and
+                            engineering solutions by delivering innovation,
+                            quality and excellence across every project.
+                        </p>
+                    </div>
+
+                    <div class="tab-content" id="mission">
+                        <p>
+                            To provide high-quality fabrication, powder coating,
+                            laser cutting and electrical panel manufacturing
+                            solutions that exceed customer expectations.
+                        </p>
+                    </div>
+
+                    <div class="tab-content" id="quality">
+                        <p>
+                            We are committed to maintaining the highest quality
+                            standards through continuous improvement, skilled
+                            workmanship and customer satisfaction.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ======================================================================================================= -->
+<section class="services-section">
+
+    <div class="container">
+
+        <div class="services-top">
+
+            <div class="services-heading">
+                <span class="service-tag">OUR SERVICES</span>
+
+                <h2>
+                    Light & Heavy Fabrication <br>
+                    Solutions For Every Industry
+                </h2>
+
+                    <a href="services.html" class="service-btn">
+                        View All Services
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+            </div>
+
+            <div class="service-controls">
+
+                <button class="scroll-btn prev-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+
+                <button class="scroll-btn next-btn">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="services-scroll" id="servicesSlider">
+
+            <div class="service-card">
+                <img src="img/service1.jpg" alt="">
+
+                <div class="service-info">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+
+                    <h3>Light & Heavy Fabrication</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="img/service2.webp" alt="">
+
+                <div class="service-info">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-spray-can-sparkles"></i>
+                    </div>
+
+                    <h3>Powder Coating</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="img/service3.jpg" alt="">
+
+                <div class="service-info">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <h3>Laser Cutting</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="img/service4.jpg" alt="">
+
+                <div class="service-info">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-drafting-compass"></i>
+                    </div>
+
+                    <h3>Sheet Metal Bending</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="img/service5.jpg" alt="">
+
+                <div class="service-info">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+
+                    <h3>Electrical Panel Boxes</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="img/services6.jpg" alt="">
+
+                <div class="service-info">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+
+                    <h3>Metal Structures & Frames</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="img/service10.jpeg" alt="">
+
+                <div class="service-info">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                    </div>
+
+                    <h3>Welding & Assembly</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="img/service8.jpg" alt="">
+
+                <div class="service-info">
+                    <div class="service-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <h3>Quality Inspection</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ====================================================================================================== -->
+<!-- =========================
+     COMPANY STATS
+========================= -->
+
+<section class="stats-section">
+
+    <div class="stats-header">
+        <span class="service-tag">OUR ACHIEVEMENTS</span>
+        <h2>Engineering Excellence Backed by Numbers</h2>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <div class="stat-number">15+</div>
+            <h3>Years Experience</h3>
+            <p>Delivering fabrication and engineering solutions across industries.</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-number">1200+</div>
+            <h3>Projects Completed</h3>
+            <p>Successfully executed fabrication and manufacturing projects.</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <h3>Happy Clients</h3>
+            <p>Trusted by businesses for quality, precision and reliability.</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-number">24/7</div>
+            <h3>Support Service</h3>
+            <p>Dedicated team available for technical and project assistance.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================================================== -->
+
+<section class="industries-section">
+
+    <div class="container">
+
+        <div class="industries-header">
+           <span class="service-tag">INDUSTRIES WE SERVE</span>
+              <h2>Trusted Across Industries</h2>
+        </div>
+
+        <div class="industry-mosaic">
+
+            <div class="industry-card large">
+                <img src="img/industri1.jpg" alt="">
+                <div class="industry-overlay">
+                    <h3>Electrical & Power Industry</h3>
+                </div>
+            </div>
+
+            <div class="industry-card">
+                <img src="img/industri2.jfif" alt="">
+                <div class="industry-overlay">
+                    <h3>Industrial Equipment Manufacturers</h3>
+                </div>
+            </div>
+
+            <div class="industry-card">
+                <img src="img/industry3.jfif" alt="">
+                <div class="industry-overlay">
+                    <h3>Automotive & Engineering</h3>
+                </div>
+            </div>
+
+            <div class="industry-card large">
+                <img src="img/industry4.jpg" alt="">
+                <div class="industry-overlay">
+                    <h3>Construction & Infrastructure</h3>
+                </div>
+            </div>
+
+            <div class="industry-card large">
+                <img src="img/Industry5.webp" alt="">
+                <div class="industry-overlay">
+                    <h3>Commercial & Retail Fixtures</h3>
+                </div>
+            </div>
+
+            <div class="industry-card">
+                <img src="img/industri6.jfif" alt="">
+                <div class="industry-overlay">
+                    <h3>Renewable Energy Sector</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================== -->
+
+<section class="logo-marquee-section">
+
+    <div class="container">
+
+        <div class="logo-heading">
+            <span class="service-tag">TRUSTED PARTNERS</span>
+        </div>
+
+        <div class="logo-marquee">
+
+            <div class="logo-track">
+
+                <!-- Logos -->
+                <div class="logo-item">
+                    <img src="img/logo1.jpeg" alt="">
+                </div>
+
+                <div class="logo-item">
+                    <img src="img/logo2.jpeg" alt="">
+                </div>
+
+                <div class="logo-item">
+                    <img src="img/logo3.jpeg" alt="">
+                </div>
+
+                <div class="logo-item">
+                    <img src="img/logo4.jpeg" alt="">
+                </div>
+
+                <div class="logo-item">
+                    <img src="img/logo5.jpeg" alt="">
+                </div>
+
+                <div class="logo-item">
+                    <img src="img/logo6.jpeg" alt="">
+                </div>
+
+                <!-- Duplicate For Infinite Scroll -->
+
+                    <!-- Logos -->
+                <div class="logo-item">
+                    <img src="img/logo1.jpeg" alt="">
+                </div>
+
+                <div class="logo-item">
+                    <img src="img/logo2.jpeg" alt="">
+                </div>
+
+                <div class="logo-item">
+                    <img src="img/logo3.jpeg" alt="">
+                </div>
+
+                <div class="logo-item">
+                    <img src="img/logo4.jpeg" alt="">
+                </div>
+
+                <div class="logo-item">
+                    <img src="img/logo5.jpeg" alt="">
+                </div>
+
+                <div class="logo-item">
+                    <img src="img/logo6.jpeg" alt="">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- Company Info -->
+            <div class="footer-col">
+                <img src="img/Entire_logo.png" alt="Entire Solutions" class="footer-logo">
+
+                <p>
+                    Entire Solutions specializes in fabrication,
+                    powder coating, laser cutting, sheet metal
+                    bending and electrical panel box manufacturing
+                    for industrial and commercial sectors.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-col">
+                <h3>Our Services</h3>
+
+                <ul>
+                    <li>Light & Heavy Fabrication</li>
+                    <li>Powder Coating</li>
+                    <li>Laser Cutting</li>
+                    <li>Sheet Metal Bending</li>
+                    <li>Electrical Panel Boxes</li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Your Company Address
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 XXXXX XXXXX
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    info@entiresolutions.com
+                </p>
+
+                <div class="footer-social">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © 2026 Entire Solutions. All Rights Reserved.| Developed by <Span><a href="https://qirotec.com/">Qiro Tech innovation Pvt.LTD.</a></Span>
+            
+            </p>
+        </div>
+
+    </div>
+
+</footer>
+    
+
+<script src="js/script.js"></script>
+</body>
+</html>
