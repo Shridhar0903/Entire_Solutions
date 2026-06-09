@@ -1109,8 +1109,10 @@ MOBILE
 ========================== */
 
 .logo-marquee-section{
-    padding:90px 0;
+    padding:10px 0 20px;
     background:#fff;
+    margin-bottom: 50px;
+     margin-top: 20px;
 }
 
 .logo-heading{
@@ -1118,12 +1120,7 @@ MOBILE
     margin-bottom:50px;
 }
 
-.logo-heading span{
-    font-size:14px;
-    font-weight:700;
-    letter-spacing:3px;
-    color:#7c3aed;
-}
+
 
 .logo-marquee{
     position:relative;
