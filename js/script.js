@@ -68,3 +68,54 @@ setInterval(() => {
 
   showSlide(currentSlide);
 }, 5000);
+
+// =============================================================
+
+const statsSection = document.querySelector(".stats-modern");
+const counters = document.querySelectorAll(".stat-value[data-target]");
+
+function startCounters() {
+  counters.forEach((counter) => {
+    const target = Number(counter.dataset.target);
+
+    let current = 0;
+    const increment = target / 80;
+
+    function updateCounter() {
+      current += increment;
+
+      if (current < target) {
+        counter.textContent = Math.floor(current).toLocaleString();
+
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.textContent = target.toLocaleString() + "+";
+      }
+    }
+
+    updateCounter();
+  });
+}
+
+function resetCounters() {
+  counters.forEach((counter) => {
+    counter.textContent = "0";
+  });
+}
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        startCounters();
+      } else {
+        resetCounters();
+      }
+    });
+  },
+  {
+    threshold: 0.4,
+  },
+);
+
+observer.observe(statsSection);
